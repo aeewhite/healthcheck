@@ -1,4 +1,4 @@
-healthcheck 0.1.0
+healthcheck 0.1.1
 Andrew White <aeewhite@gmail.com>
 Emulate kubernetes health check for testing purposes
 
