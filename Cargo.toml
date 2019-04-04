@@ -1,0 +1,13 @@
+[package]
+name = "healthcheck"
+version = "0.1.0"
+authors = ["Andrew White <aeewhite@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+quicli = "0.4"
+structopt = "0.2"
+url = "1.7.2"
+reqwest = "0.9.13"
+chrono = "0.4"
+colored = "1.7"
