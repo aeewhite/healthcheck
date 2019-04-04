@@ -18,10 +18,10 @@ main() {
     test -f Cargo.lock || cargo generate-lockfile
 
     # TODO Update this to build the artifacts that matter to you
-    cross rustc --bin airmedia --target $TARGET --release -- -C lto
+    cross rustc --bin healthcheck --target $TARGET --release -- -C lto
 
     # TODO Update this to package the right artifacts
-    cp target/$TARGET/release/airmedia $stage/
+    cp target/$TARGET/release/healthcheck $stage/
 
     cd $stage
     tar czf $src/$CRATE_NAME-$TRAVIS_TAG-$TARGET.tar.gz *
