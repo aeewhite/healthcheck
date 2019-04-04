@@ -1,0 +1,18 @@
+healthcheck 0.1.0
+Andrew White <aeewhite@gmail.com>
+Emulate kubernetes health check for testing purposes
+
+USAGE:
+    healthcheck [OPTIONS] <url>
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+OPTIONS:
+    -d, --delay <delay>                   Delay between health check calls [default: 15]
+    -f, --failure-threshold <failures>    Failures before marking service as unhealthy [default: 3]
+    -t, --timeout <timeout>               Request timeout for health check [default: 10]
+
+ARGS:
+    <url>    The URL to check
