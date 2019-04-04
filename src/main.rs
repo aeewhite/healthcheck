@@ -20,14 +20,10 @@ struct Cli {
     timeout: u64,
     /// The URL to check
     url: Url,
-    // Quick and easy logging setup you get for free with quicli
-    #[structopt(flatten)]
-    verbosity: Verbosity,
 }
 
 fn main() -> CliResult {
     let args = Cli::from_args();
-    args.verbosity.setup_env_logger("head")?;
     let delay = time::Duration::from_secs(args.delay);
     run_health_check_loop(args.url.clone(), delay, args.failures, args.timeout);
 
